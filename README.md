@@ -97,6 +97,36 @@ cd rabbit-r1-simon-says
 # ↓ = Scroll Down
 # Space/Enter = Button
 # S = Shake
+
+
+## 📱 Install on rabbit r1
+
+### Method 1: Scan QR Code (Recommended)
+
+1. **Generate QR Code**: Visit [https://qr.munb.me/json-qr](https://qr.munb.me/json-qr)
+2. **Enter this JSON**:
+```json
+{
+  "title": "Simon Says",
+  "url": "https://jjames1992.github.io/rabbit-r1-simon-says/",
+  "description": "Game Boy memory game - Watch sequence, repeat it back!",
+  "themeColor": "#9BBC0F"
+}
+```
+3. **Click "Generate QR Code"**
+4. **On your r1**: Open Creations → Tap "Add via QR code" → Scan the generated code
+5. **Play!** The game will appear as a new card in your Creations
+
+### Method 2: GitHub Pages URL
+
+- Try entering the URL directly on your r1 (if supported): `https://jjames1992.github.io/rabbit-r1-simon-says/`
+
+### Troubleshooting
+
+- **Button not working?** Try tapping the screen instead - it works as a fallback!
+- **Game not loading?** Ensure GitHub Pages is enabled (Settings → Pages → Deploy from main branch)
+
+---
 ```
 
 ## 🚀 Future Ideas
