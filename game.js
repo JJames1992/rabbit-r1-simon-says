@@ -73,6 +73,8 @@ class SimonSaysGame {
             creation.on('scrollUp', () => this.handleInput('up'));
             creation.on('scrollDown', () => this.handleInput('down'));
             creation.on('sideClick', () => this.handleInput('button'));
+                    creation.on('buttonPress', () => this.handleInput('button'));
+                    creation.on('pttButton', () => this.handleInput('button'));
             
             // Shake detection
             creation.on('accelerometer', (data) => {
@@ -81,6 +83,13 @@ class SimonSaysGame {
                 }
             });
         }
+
+                // Screen tap as alternative to button
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('button')) {  // Avoid double-triggering
+                this.handleInput('button');
+            }
+        });
         
         // Fallback keyboard controls for testing
         document.addEventListener('keydown', (e) => {
