@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 240px;
+    height: 282px;
+    overflow: hidden;
+    background: #0f380f;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen {
+    width: 220px;
+    height: 262px;
+    background: #9bbc0f;
+    border: 3px solid #0f380f;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.screen-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Pixel Text Styling */
+.pixel-text {
+    color: #0f380f;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 2px 2px 0px rgba(15, 56, 15, 0.3);
+    margin: 10px 0;
+}
+
+.pixel-text.small {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.pixel-text.tiny {
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+.pixel-text.message {
+    font-size: 20px;
+    animation: blink 0.5s infinite;
+}
+
+/* Action Icons */
+.action-icon {
+    font-size: 80px;
+    color: #0f380f;
+    animation: flash 0.3s ease-in-out;
+    text-align: center;
+    line-height: 1;
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* Layout adjustments */
+#round-display {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+}
+
+#score-display {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+#action-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#message-display {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+.controls-help {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #0f380f;
+    background: rgba(15, 56, 15, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}

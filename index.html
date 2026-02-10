@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says - r1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Game Screen -->
+        <div id="screen" class="screen">
+            <div id="title-screen" class="screen-content">
+                <h1 class="pixel-text">SIMON SAYS</h1>
+                <p class="pixel-text small">Press Button to Start</p>
+                <div class="controls-help">
+                    <p class="pixel-text tiny">↑ Scroll Up</p>
+                    <p class="pixel-text tiny">↓ Scroll Down</p>
+                    <p class="pixel-text tiny">● Button</p>
+                    <p class="pixel-text tiny">✱ Shake</p>
+                </div>
+            </div>
+            
+            <div id="game-screen" class="screen-content hidden">
+                <div id="round-display" class="pixel-text">ROUND 1</div>
+                <div id="score-display" class="pixel-text small">SCORE: 0</div>
+                <div id="action-display" class="action-icon hidden"></div>
+                <div id="message-display" class="pixel-text message hidden"></div>
+            </div>
+            
+            <div id="game-over-screen" class="screen-content hidden">
+                <h2 class="pixel-text">GAME OVER</h2>
+                <p id="final-score" class="pixel-text">SCORE: 0</p>
+                <p id="high-score" class="pixel-text small">HIGH: 0</p>
+                <p class="pixel-text small">Press Button to Retry</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
